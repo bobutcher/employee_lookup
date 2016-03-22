@@ -1,5 +1,5 @@
 require_relative "department_test"
-
+require_relative "employee"
 
 class Department
   attr_reader(:human_resources, :finance, :sales)

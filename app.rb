@@ -14,5 +14,9 @@ yvonne.raise_salary
 sales = Department.new('sales')
 # added employee to department
 sales.employee_to_department(zeke)
-# shows employee in department
-sales
+sales.employee_to_department(wanda)
+
+# shows department name
+sales.department_name
+# shows department salary
+sales.total_salary

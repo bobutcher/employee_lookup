@@ -14,5 +14,6 @@ class Department
   def total_salary
     sum = 0
     @employees.each_key { |each| sum += @employees[each].salary }
+    sum
   end
 end

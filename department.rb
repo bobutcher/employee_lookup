@@ -10,4 +10,9 @@ class Department
   def employee_to_department(person)
     @employees[person.name] = person
   end
+
+  def total_salary
+    sum = 0
+    @employees.each_key { |each| sum += @employees[each].salary }
+  end
 end

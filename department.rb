@@ -1,22 +1,13 @@
-require_relative "department_test"
-require_relative "employee"
+require_relative 'department_test'
 
 class Department
-  attr_reader(:human_resources, :finance, :sales)
-  def initialize
-    @human_resources = human_resources
-    @finance = finance
-    @sales = sales
-  end
-  def employee_to_department
-    @sales = [zeke]
+  attr_reader :department_name, :employees
+  def initialize(department_name, employees = {})
+    @department_name = department_name
+    @employees = employees
   end
 
-
-  # employee_lookup = { zeke = ["Zeke", "zeke@acme.com", "2025690578", 100,000],
-  # yvonne = ["Yvonne", "yvonne@acme.com","2020981234", 110,000],
-  # xavier = ["Xavier", "xavier@acme.com", "2023834466", 105,000],
-  # wanda = ["Wanda", "wanda@acme.com", "2029298833", 125,000]
-  # }
-
+  def employee_to_department(person)
+    @employees[person.name] = person
+  end
 end

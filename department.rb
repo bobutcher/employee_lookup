@@ -1,4 +1,3 @@
-require_relative 'department_test'
 
 class Department
   attr_reader :department_name, :employees
@@ -15,5 +14,13 @@ class Department
     sum = 0
     @employees.each_key { |each| sum += @employees[each].salary }
     sum
+  end
+
+  def department_raise(bonus)
+    @employees.each_key { |each|
+      if @employees[each].performance == 'Satisfactory'
+        @employees[each].salary = @employees[each].salary + bonus
+      end
+    }
   end
 end

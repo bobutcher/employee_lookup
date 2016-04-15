@@ -19,9 +19,7 @@ class Department
   def department_raise(bonus)
     @employees.each_key do |name|
       employee = @employees[name]
-      # DoSTUFFF
       employee.raise_salary(bonus)
-
     end
   end
 end

@@ -13,7 +13,7 @@ class Employee
     @review = review
   end
 
-  def raise_salary
-    @salary += 1000
+  def raise_salary(amount = 1000)
+    @salary += amount
   end
 end

@@ -21,9 +21,11 @@ class DepartmentTest < Minitest::Test
     sales = Department.new('sales')
     sales.employee_to_department(@zeke)
   end
+
   def test_can_give_department_raise
     sales = Department.new('sales')
+    sales.employee_to_department(@zeke)
     sales.department_raise(1000)
-    assert_equal @zeke.salary, 100000
+    assert_equal @zeke.salary, 101_000
   end
 end

@@ -1,4 +1,4 @@
-
+require 'pry'
 class Department
   attr_reader :department_name, :employees
   def initialize(department_name, employees = {})
@@ -12,11 +12,16 @@ class Department
 
   def total_salary
     sum = 0
-    @employees.each_key { |each| sum += @employees[each].salary }
+    @employees.each_key { |name| sum += @employees[name].salary }
     sum
   end
 
   def department_raise(bonus)
+    @employees.each_key do |name|
+      employee = @employees[name]
+      # DoSTUFFF
+      employee.raise_salary(bonus)
 
+    end
   end
 end

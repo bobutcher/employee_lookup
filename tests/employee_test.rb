@@ -23,8 +23,13 @@ require '../employee_reviews/employee'
       assert_equal 100000, @zeke.salary
     end
 
-    def test_can_add_employee_review
-      @zeke.review = 'Zeke is a team player'
-      assert_equal 'Zeke is a team player', @zeke.review
+    def test_can_get_performance
+      @zeke = Employee.new('zeke', 'zeke@gmail.com', '1234567890', 100000)
+      @zeke.performance = 'Satisfactory'
+      assert_equal 'Satisfactory', @zeke.performance
+    end
+
+    def test
+
     end
   end

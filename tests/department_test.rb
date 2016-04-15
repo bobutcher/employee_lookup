@@ -4,7 +4,6 @@ require '../employee_reviews/department'
 require '../employee_reviews/employee'
 
 class DepartmentTest < Minitest::Test
-
   def setup
     @zeke = Employee.new('zeke', 'zeke@gmail.com', '1234567890', 100000)
   end
@@ -21,5 +20,10 @@ class DepartmentTest < Minitest::Test
   def test_can_add_employee_to_department
     sales = Department.new('sales')
     sales.employee_to_department(@zeke)
+  end
+  def test_can_give_department_raise
+    sales = Department.new('sales')
+    sales.department_raise(1000)
+    assert_equal @zeke.salary, 100000
   end
 end

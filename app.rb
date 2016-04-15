@@ -20,5 +20,9 @@ sales.employee_to_department(wanda)
 sales.department_name
 # shows department salary
 sales.total_salary
-
+zeke.performance = 'Satisfactory'
 sales.department_raise(2000)
+
+# !> /Users/bobutcher/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/seeing_is_believing-3.0.0.beta.6/lib/seeing_is_believing/event_stream/producer.rb:97:in `record_exception': undefined method `size' for nil:NilClass (NoMethodError)
+# !> \tfrom /Users/bobutcher/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/seeing_is_believing-3.0.0.beta.6/lib/seeing_is_believing/the_matrix.rb:40:in `block in <top (required)>'
+# !> /Users/bobutcher/Documents/employee_reviews/app.rb: /Users/bobutcher/Documents/employee_reviews/employee.rb:26: syntax error, unexpected keyword_end, expecting end-of-input (SyntaxError)

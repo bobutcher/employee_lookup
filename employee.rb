@@ -2,14 +2,15 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class Employee
-  attr_reader :name, :email, :phone, :salary, :review, :performance
-  def initialize(name, email, phone, salary, review=nil, performance=nil)
+  attr_reader :name, :email, :phone, :salary
+  attr_accessor :performance, :review
+  def initialize(name, email, phone, salary)
     @name = name
     @email = email
     @phone = phone
     @salary = salary
-    @review = review
     @performance = performance
+    @review = review
   end
 
   def raise_salary

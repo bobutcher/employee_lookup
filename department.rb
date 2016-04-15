@@ -17,10 +17,6 @@ class Department
   end
 
   def department_raise(bonus)
-    @employees.each_key { |each|
-      if @employees[each].performance == 'Satisfactory'
-        @employees[each].salary = @employees[each].salary + bonus
-      end
-    }
+
   end
 end
